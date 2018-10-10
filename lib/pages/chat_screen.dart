@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_whatsapp/pages/user_chat.dart';
 import '../models/chat_model.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -42,6 +43,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     style: new TextStyle(color: Colors.grey, fontSize: 15.0),
                   ),
                 ),
+                onTap: () {
+                  Navigator.push(context,
+                      new MaterialPageRoute(builder: (context) {
+                    return new UserChat(data: dummyData[i]);
+                  }));
+                },
               )
             ],
           ),
